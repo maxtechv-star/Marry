@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Electrical Elites — Holiday Wish</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="card">
+    <header class="hero">
+      <div class="hero-left">
+        <img id="group-photo" src="https://vero-upload.zone.id/files/1766608386819_tzmuom13j.png" alt="Group photo" />
+      </div>
+      <div class="hero-right">
+        <input id="group-name" class="editable big" value="Electrical Elites" />
+        <div class="meta">
+          <input id="member-count" class="editable small" value="35 members" />
+        </div>
+      </div>
+    </header>
+
+    <section class="greeting">
+      <textarea id="greeting-text">Merry X‑mas and a very Happy New Year!</textarea>
+
+      <div class="personalize">
+        <input id="recipient-name" placeholder="Enter recipient name (e.g. Olivia)" />
+        <input id="sender-name" placeholder="Sender name (optional — leave blank to send from group)" />
+        <button id="create-wish-btn">Create wish link</button>
+        <button id="copy-link-btn">Copy current link</button>
+        <button id="open-link-btn">Open wish (preview)</button>
+      </div>
+
+      <div class="controls">
+        <button id="celebrate-btn">Celebrate 🎉</button>
+      </div>
+    </section>
+
+    <section class="wish-view hidden" id="wish-view">
+      <h2 id="wish-title"></h2>
+      <p id="wish-greeting"></p>
+      <button id="play-btn" class="big-play">Play audio 🎵</button>
+    </section>
+
+    <footer class="notes">
+      <small>Tip: Enter a recipient name and optional sender, then click "Create wish link" to generate a shareable URL. When that link is opened it will show the personalized greeting and attempt to play the song. If autoplay is blocked, the recipient can press "Play audio".</small>
+    </footer>
+  </main>
+
+  <audio id="audio" preload="auto" src="https://vero-upload.zone.id/files/1766607770700_9zr4ricgr1t.mp3"></audio>
+  <canvas id="confetti-canvas" class="confetti-canvas"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
